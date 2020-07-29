@@ -1,0 +1,17 @@
+<wxs module="wxs">
+  function setStyle(duration,transform,styles){
+    var _style = '';
+    _style += 'transition-duration:' +  parseFloat(duration) / 1000 +'s;';
+    _style += 'transform:'+transform +';';
+    if(styles) {
+      _style += styles;
+    }
+    return _style;
+  }
+  module.exports = {
+    setStyle:setStyle
+  }
+</wxs>
+<view class="own-transition {{in}}" style="{{wxs.setStyle(duration,transform,styles)}}" wx:if="{{isShow}}" bindtap="change">
+  <slot />
+</view>

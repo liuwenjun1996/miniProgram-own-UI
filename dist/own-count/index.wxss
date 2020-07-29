@@ -1,0 +1,87 @@
+@import '../components-css.wxss';
+
+.own-count {
+  display: inline-block;
+  border: 1px solid #e5e5e5;
+ 
+}
+.own-count .own-count-inner {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.own-count .own-count-sub,
+.own-count .own-count-add {
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.own-count .own-count-input {
+  border-right: 1px solid #e5e5e5;
+  border-left: 1px solid #e5e5e5;
+  text-align: center;
+  flex: 1;
+  min-height: inherit !important;
+  height: 100% !important;
+  line-height: inherit;
+}
+.own-count.sm {
+  height: 44rpx;
+  border-radius: 4rpx;
+}
+.own-count.md {
+  height: 50rpx;
+  border-radius: 8rpx;
+}
+
+.own-count.lg {
+  height: 60rpx;
+  border-radius: 10rpx;
+ 
+}
+
+.own-count.sm .own-count-sub,
+.own-count.sm .own-count-add {
+  width: 44rpx;
+  font-size: 30rpx;
+  line-height: 42rpx;
+}
+
+.own-count.sm .own-count-input {
+  font-size: 22rpx;
+  width: 74rpx;
+
+}
+
+.own-count.md .own-count-sub,
+.own-count.md .own-count-add {
+  width: 46rpx;
+  font-size: 30rpx;
+  line-height: 48rpx;
+}
+
+.own-count.md .own-count-input {
+  font-size: 26rpx;
+  width: 88rpx;
+}
+
+.own-count.lg .own-count-sub,
+.own-count.lg .own-count-add {
+  width: 56rpx;
+  font-size: 34rpx;
+  line-height: 58rpx;
+}
+.own-count.lg .own-count-input {
+  font-size: 30rpx;
+  width: 98rpx;
+}
+
+
+
+.own-input-err {
+  font-size: 24rpx;
+  padding-top: 10rpx;
+  color: red;
+}

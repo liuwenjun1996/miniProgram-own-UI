@@ -1,0 +1,24 @@
+<wxs module="wxs">
+  function getIconStyle(color,size){
+    var style = '';
+    if(color) {
+      style +="color:" + color +';'
+    }
+    if(size) {
+      style +="font-size:" + size + ";"
+    }
+    return style;
+  }
+  function getIconName(name){
+    if(name) {
+      return 'own-icon-' + name;
+    }
+    return '';
+  }
+  module.exports = {
+    getIconStyle:getIconStyle,
+    getIconName:getIconName
+  }
+</wxs>
+<view class="own-icon iconfont {{wxs.getIconName(name)}} own-class" style="{{wxs.getIconStyle(color,size)}}">
+</view>

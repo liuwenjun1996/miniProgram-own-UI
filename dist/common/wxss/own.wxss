@@ -1,0 +1,320 @@
+
+
+/* 主题色 */
+/* .primary {
+	由后台提供
+}
+.secondary {
+  由后台提供
+} */
+/* .dark {
+	color: #3c424a;
+}
+.grey {
+	color: #849094;
+}
+.light {
+	color: #a7b7bd;
+} */
+.dark {
+	color: #333;
+}
+.grey {
+	color: #666;
+}
+.light {
+	color: #999;
+}
+.inverse {
+	color: #fff;
+}
+.bg {
+	background-color: #f5f6f6;
+}
+
+/* 字体 */
+/* 超大字体 */
+.lg-font {
+  font-size: 48rpx;
+}
+
+.slg-font {
+  font-size: 36rpx;
+}
+.lmd-font {
+  font-size: 30rpx;
+}
+/* 默认字体 */
+.md-font {
+  font-size: 28rpx;
+}
+
+/* 小字体 */
+.sm-font {
+  font-size: 26rpx;
+}
+
+/* 超小字体 */
+.xs-font {
+  font-size: 24rpx;
+}
+
+.normal-font {
+  font-weight: normal;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+.block {
+  display: block !important;
+}
+.line-block {
+  display: inline-block;
+}
+/* 线条 */
+.border-top {
+  border-top: 1px solid #f6f8f9;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #f6f8f9;
+}
+.no-line {
+  border: none !important;
+}
+.no-bg {
+  background-color: transparent !important;
+}
+
+.singleRow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+/* 基本布局 */
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.global-header {
+  position: fixed;
+  width: 100%;
+  height: 88rpx;
+  left: 0;
+  top: 0;
+  z-index: 50;
+  transition: all 0.3s;
+  background: #fff;
+}
+
+.global-container {
+  padding-top: 90rpx;
+}
+
+.global-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  z-index: 10;
+  background: #fff;
+  border-top: 1px solid #e4eff1;
+}
+
+/* 内外边距 */
+.no-padding {
+  padding: 0 !important;
+}
+.padding {
+  padding: 30rpx !important;
+}
+
+.sm-padding {
+  padding: 20rpx !important;
+}
+
+.xs-padding {
+  padding: 10rpx !important;
+}
+
+.padding-left {
+  padding-left: 30rpx !important;
+}
+
+.sm-padding-left {
+  padding-left: 20rpx !important;
+}
+
+.xs-padding-left {
+  padding-left: 10rpx !important;
+}
+
+.padding-right {
+  padding-right: 30rpx !important;
+}
+
+.sm-padding-right {
+  padding-right: 20rpx !important;
+}
+
+.xs-padding-right {
+  padding-right: 10rpx !important;
+}
+
+.padding-top {
+  padding-top: 30rpx !important;
+}
+
+.sm-padding-top {
+  padding-top: 20rpx !important;
+}
+
+.xs-padding-top {
+  padding-top: 10rpx !important;
+}
+
+.padding-bottom {
+  padding-bottom: 30rpx !important;
+}
+
+.sm-padding-bottom {
+  padding-bottom: 20rpx !important;
+}
+
+.xs-padding-bottom {
+  padding-bottom: 10rpx !important;
+}
+.no-margin {
+  margin: 0 !important;
+}
+.margin {
+  margin: 30rpx !important;
+}
+
+.sm-margin {
+  margin: 20rpx !important;
+}
+
+.xs-margin {
+  margin: 10rpx !important;
+}
+
+.margin-left {
+  margin-left: 30rpx !important;
+}
+
+.sm-margin-left {
+  margin-left: 20rpx !important;
+}
+
+.xs-margin-left {
+  margin-left: 10rpx !important;
+}
+
+.margin-right {
+  margin-right: 30rpx !important;
+}
+
+.sm-margin-right {
+  margin-right: 20rpx !important;
+}
+
+.xs-margin-right {
+  margin-right: 10rpx !important;
+}
+
+.margin-top {
+  margin-top: 30rpx !important;
+}
+
+.sm-margin-top {
+  margin-top: 20rpx !important;
+}
+
+.xs-margin-top {
+  margin-top: 10rpx !important;
+}
+
+.margin-bottom {
+  margin-bottom: 30rpx !important;
+}
+
+.sm-margin-bottom {
+  margin-bottom: 20rpx !important;
+}
+
+.xs-margin-bottom {
+  margin-bottom: 10rpx !important;
+}
+
+/* flex布局 */
+.flex {
+  display: flex;
+}
+
+.flex-item {
+  flex: 1;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.align-items-end {
+  align-items: flex-end
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-between-end {
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.flex-wrap {
+  word-wrap: break-word;
+}
+

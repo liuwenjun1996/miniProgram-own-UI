@@ -1,0 +1,22 @@
+<wxs module="wxs">
+  function setStyle(sysConfig) {
+    var style = '';
+    style = 'background-color: ' + sysConfig.colorCustom.colorMain +';';
+    return style;
+  }
+  module.exports = {
+    setStyle:setStyle
+  }
+</wxs>
+<cover-view class="animated own-loading {{show?'fadeOut':''}}" hidden="{{show}}">
+  <cover-view class='own-loading-bg'></cover-view>
+  <cover-view class='own-mask'>
+
+    <cover-view class="own-loading-dots">
+      <cover-view class="own-loading-dots-item" style="{{wxs.setStyle(sysConfig)}}"></cover-view>
+      <cover-view class="own-loading-dots-item" style="{{wxs.setStyle(sysConfig)}}"></cover-view>
+      <cover-view class="own-loading-dots-item" style="{{wxs.setStyle(sysConfig)}}"></cover-view>
+    </cover-view>
+    <cover-view class='own-msg'>{{msg}}</cover-view>
+  </cover-view>
+</cover-view>

@@ -1,0 +1,16 @@
+<wxs module="component" src="../components-wxs.wxs"></wxs>
+<wxs module="wxs">
+  function setStyle(shadow) {
+    var style="";
+    if(shadow) {
+      style="box-shadow: 0rpx 10rpx 30rpx 2rpx #e4e4e4;"
+    }
+    return style;
+  }
+  module.exports = {
+    setStyle:setStyle
+  }
+</wxs>
+<view class="own-card {{component.setClass(classList)}} own-card-class" style="{{wxs.setStyle(shadow)}}"> 
+  <slot />
+</view>

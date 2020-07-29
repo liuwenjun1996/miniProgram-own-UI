@@ -1,0 +1,25 @@
+<own-tabs list="{{list}}" margin-top showTag more more-position="start">
+	<text >更多</text>
+</own-tabs>
+<own-tabs list="{{list_1}}" extend="{{extend}}"  type="outline" margin-top current="{{current}}"></own-tabs>
+<own-tabs list="{{list}}" type="block" showTag margin-top></own-tabs>
+<own-tabs list="{{list_1}}" showTag extend="{{extend}}" type="outline" scrollable margin-top></own-tabs>
+<own-tabs list="{{list_1}}" showTag extend="{{extend}}" scrollable margin-top more>
+<text >更多</text>
+</own-tabs>
+<view style="height: 800rpx; margin-top:20rpx;display:inline-block;margin-right:20rpx;">
+	<own-tabs list="{{list}}" position="left" more bind:moreClick="moreClick">
+	<text >更多</text>
+	</own-tabs>
+</view>
+<view style="height: 800rpx; margin-top:20rpx;display:inline-block;margin-right:20rpx;">
+	<own-tabs list="{{list}}" position="left" type="outline"></own-tabs>
+</view>
+<view style="height: 800rpx; margin-top:20rpx;display:inline-block;margin-right:20rpx;">
+	<own-tabs list="{{list}}" position="left" type="block"></own-tabs>
+</view>
+<view style="height: 500rpx; margin-top:20rpx;display:inline-block;margin-right:20rpx;">
+	<own-tabs list="{{list_1}}" extend="{{extend}}" position="left" scrollable type="outline" showTag bind:change="tabChange" more  more-position="start">
+		<text >更多</text>
+	</own-tabs>
+</view>

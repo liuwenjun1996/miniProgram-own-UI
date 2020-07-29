@@ -1,0 +1,9 @@
+
+<view style="height: 500rpx">
+<own-empty>
+</own-empty>
+</view>
+
+<view style="height: 1000rpx">
+<own-empty show="true"></own-empty>
+</view>

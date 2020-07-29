@@ -1,0 +1,7 @@
+<wxs module="component" src="../components-wxs.wxs"></wxs>
+<view class="own-list own-list-class">
+  <view class="own-list-header own-header-class" wx:if="{{header}}">
+    <slot name="header" />
+  </view>
+  <slot />
+</view>

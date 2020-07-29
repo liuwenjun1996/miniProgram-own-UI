@@ -1,0 +1,24 @@
+<wxs module="component" src="../components-wxs.wxs"></wxs>
+<wxs module="theme" src="../../wxs/theme.wxs"></wxs>
+<view class="own-search own-search-class component.setClass(classList)}}" style="{{mode == 'mould'?mouldStyle:''}}">
+	<block wx:if="{{mode == 'mould'}}">
+		<view class="own-search-inner">
+			<own-icon wx:if="{{showIcon}}" name="{{iconName}}" size="{{iconSize}}" color="{{iconColor}}"></own-icon>
+			<text class="{{showIcon?xs-padding-left:''}}" style="{{tipStyle}}">{{tip}}</text>
+		</view>
+	</block>
+	<block wx:else>
+		<view class="own-search-inner">
+			<view wx:if="prefix" class="xs-margin-right">
+				<slot />
+			</view>
+			<view class="own-input-inner">
+				<view class="own-input-icon">
+					<own-icon name="{{iconName}}" size="{{iconSize}}" color="{{iconColor}}"></own-icon>
+				</view>
+				<input type='search' class='own-input' value="{{searchValue}}" bindinput="_searchInput" placeholder="搜索商品名称"></input>
+				<button class="button sm" style="{{theme.buttonTheme(sysConfig)}}" bindtap="search">{{searchText}}</button>
+			</view>
+		</view>
+	</block>
+</view>

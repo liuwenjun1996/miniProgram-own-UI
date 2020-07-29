@@ -1,0 +1,8 @@
+<view wx:if="{{showPopup}}" class="own-popup-contianer">
+	<own-transition modeClass="{{popupBgClass}}" maskCanClick="{{maskCanClick}}" styles="{{maskStyles}}" show="{{showTrans}}" bind:change="maskTap"></own-transition>
+	<own-transition modeClass="{{modeClass}}" maskCanClick="{{false}}" styles="{{transStyles}}" show="{{showTrans}}">
+		<view class="own-popup-inner own-inner-class">
+			<slot />
+		</view>
+	</own-transition>
+</view>

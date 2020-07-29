@@ -1,0 +1,69 @@
+<own-list header>
+	<view slot="header">组件列表</view>
+	<own-card>
+		<own-item link no-line url="/pages/component/button/index">
+			<text>按钮button</text>
+		</own-item>
+	</own-card>
+	<own-card>
+		<own-item link no-line url="/pages/component/image/index">
+			<text>图像image</text>
+		</own-item>
+	</own-card>
+	<own-card>
+		<own-item link no-line url="/pages/component/avatar/index">
+			<text>缩略图avatar</text>
+		</own-item>
+	</own-card>
+	<own-card>
+		<own-item link no-line url="/pages/component/item/index">
+			<text>列表项item</text>
+		</own-item>
+	</own-card>
+	<own-card>
+		<own-item link no-line url="/pages/component/transition/index">
+			<text>动画transition</text>
+		</own-item>
+	</own-card>
+	<own-card>
+		<own-item link no-line url="/pages/component/popup/index">
+			<text>popup弹窗</text>
+		</own-item>
+	</own-card>
+	<own-card>
+		<own-item link no-line url="/pages/component/count/index">
+			<text>带加减号的数字输入框count</text>
+		</own-item>
+	</own-card>
+	<own-card>
+		<own-item link no-line url="/pages/component/notice/index">
+			<text>通知栏notice</text>
+		</own-item>
+	</own-card>
+	<own-card>
+		<own-item link no-line url="/pages/component/tabs/index">
+			<text>标签页tabs</text>
+		</own-item>
+	</own-card>
+	<own-card>
+		<own-item link no-line url="/pages/component/empty/index">
+			<text>空占位符empty</text>
+		</own-item>
+	</own-card>
+	<own-card>
+		<own-item link no-line url="/pages/component/tag/index">
+			<text>标签tag</text>
+		</own-item>
+	</own-card>
+	<own-card>
+		<own-item link no-line url="/pages/component/fab/index">
+			<text>悬浮按钮fab</text>
+		</own-item>
+	</own-card>
+		<own-card>
+		<own-item link no-line url="/pages/component/search/index">
+			<text>搜索框search</text>
+		</own-item>
+	</own-card>
+</own-list>
+<own-loading show="{{loading.show}}" msg="{{loading.msg}}"></own-loading>

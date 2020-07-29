@@ -1,0 +1,21 @@
+<view>
+
+	<own-fab horizontal="start" vertical="start">
+		<own-icon name="add" size="60rpx" color="#fff"></own-icon>
+		<text>添加</text>
+	</own-fab>
+	<own-fab horizontal="start" vertical="end">
+		<own-icon name="add" size="60rpx" color="#fff"></own-icon>
+		<text>添加</text>
+	</own-fab>
+	<own-fab horizontal="end" vertical="start" width="80" height="80">
+		<view>
+			<own-icon name="add" size="60rpx" color="#fff"></own-icon>
+			<text style="display:block">添加</text>
+		</view>
+
+	</own-fab>
+	<own-fab>
+		<own-icon name="add" size="60rpx" color="#fff"></own-icon>
+	</own-fab>
+</view>

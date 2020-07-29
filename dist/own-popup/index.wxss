@@ -1,0 +1,12 @@
+/* .own-popup-container {
+
+} */
+.own-popup-inner {
+  display: block;
+  position: relative;
+}
+.pupopTopContainer {
+  background-color: #fff;
+  padding: 20rpx;
+ 
+}

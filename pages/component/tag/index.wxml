@@ -1,0 +1,4 @@
+<own-tag msg="默认" margin></own-tag>
+<own-tag msg="自提点" round margin outline></own-tag>
+
+<own-tag msg="自提点" round margin outline color="#ffffff"></own-tag>

@@ -1,0 +1,21 @@
+@import '../components-css.wxss';
+.own-notice {
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  line-height: 1.5;
+}
+.own-notice .own-notice-left {
+  margin-right: 10rpx;
+}
+.own-notice .own-notice-right {
+  margin-left: 10rpx;
+}
+.own-notice .own-notice-warp {
+  flex: 1;
+  overflow: hidden;
+}
+.own-notice .own-notice-content {
+ 
+}

@@ -1,0 +1,72 @@
+// 设置主体样式
+/**
+ * @param config 系统配置
+ * @param type 按钮类型 mian:主题色  secondary: 附属颜色
+ * @param outline 是否为线条类型
+ */
+function buttonTheme(config, type = 'primary', outline = false) {
+  var colorIndex = '';
+  var style = '';
+  if (config) {
+    colorIndex = getColorIndex(type)
+    if (outline) {
+      style = 'color:' + config.colorCustom[colorIndex] + '; border-color: ' + config.colorCustom[colorIndex] + ';'
+    } else {
+      style = 'color: #fff;background-color:' + config.colorCustom[colorIndex];
+    }
+    return style;
+  }
+}
+/**
+ * @description 根据类型设置背景色
+ * @param config 系统配置
+ * @param type 类型
+ */
+function backgroundStyle(config, type = 'primary'){
+  var colorIndex = '';
+  var style = '';
+  if (config) {
+    colorIndex = getColorIndex(type);
+    style = 'background-color:' + config.colorCustom[colorIndex] + ';';
+  }
+  return style;
+}
+/**
+ * @description 根据类型设置字体颜色
+ * @param config 系统配置
+ * @param type 类型
+ */
+function colorStyle(config, type = 'primary'){
+  var colorIndex = '';
+  var style = '';
+  if (config) {
+    colorIndex = getColorIndex(type);
+    style = 'color:' + config.colorCustom[colorIndex] + ';';
+  }
+  return style;
+}
+/**
+ * 
+ * @param type 根据类型获取主题配置中对应的颜色
+ */
+function getColorIndex(type){
+  var colorIndex= '';
+  switch (type) {
+    case 'primary':
+      colorIndex = 'colorMain';
+      break;
+    case 'secondary':
+      colorIndex = 'colorSecondary';
+      break;
+    default:
+      colorIndex = 'colorMain';
+      break;
+  }
+  return colorIndex;
+}
+
+module.exports = {
+  buttonTheme: buttonTheme,
+  backgroundStyle:backgroundStyle,
+  colorStyle:colorStyle
+}

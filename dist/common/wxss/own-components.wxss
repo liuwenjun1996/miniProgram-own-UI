@@ -1,0 +1,255 @@
+/* CSS书写顺序 
+  1.位置属性(position, top, right, z-index, display, float等)
+  2.大小(width, height, padding, margin)
+  3.文字系列(font, line-height, letter-spacing, color- text-align等)
+  4.背景(background, border等)
+  5.其他(animation, transition等) 
+*/
+/* own-item */
+.own-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60rpx;
+  padding: 0 20rpx;
+  margin: 0;
+  font-size: 28rpx;
+  color: #333;
+  text-decoration: none;
+  text-align: initial;
+  background-color: #fff;
+  border-bottom: 2rpx solid #f6f8f9;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+.own-item .own-item-inner {
+  position: relative;
+  margin: 20rpx 0;
+  /* padding: 0 10rpx; */
+  flex: 1;
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
+}
+.own-item .own-item-start {
+  margin: 20rpx 20rpx 20rpx 0;
+}
+.own-item .own-item-end {
+  margin: 20rpx 0 20rpx 20rpx;
+}
+.own-item .own-item-link {
+  position: absolute;
+  right: 6rpx;
+}
+
+.own-item,
+.own-item .own-item-inner,
+.own-item .own-item-link {
+  box-sizing: border-box;
+}
+
+
+/* 栅格布局 */
+.own-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row.text-center>.own-col {
+  text-align: center;
+}
+
+.own-col {
+  position: relative;
+  margin: 0;
+  padding: 10rpx;
+  flex-grow: 1;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  max-width: 100%;
+}
+
+.col-1 {
+  flex: 0 0 8.33333%;
+  width: 8.33333%;
+  max-width: 8.33333%;
+}
+
+.col-2 {
+  flex: 0 0 16.6666%;
+  width: 16.6666%;
+  max-width: 16.6666%;
+}
+
+.col-4 {
+  flex: 0 0 33.3333%;
+  width: 33.3333%;
+  max-width: 33.3333%;
+}
+
+.col-3 {
+  flex: 0 0 25%;
+  width: 25%;
+  max-width: 25%;
+}
+
+.col-5 {
+  flex: 0 0 41.6666;
+  width: 41.6666%;
+  max-width: 41.6666%;
+}
+
+.col-6 {
+  flex: 0 0 50%;
+  width: 50%;
+  max-width: 50%;
+}
+
+.col-7 {
+  flex: 0 0 58.3333%;
+  width: 58.3333%;
+  max-width: 58.3333%;
+}
+
+.col-8 {
+  flex: 0 0 66.6666%;
+  width: 66.6666%;
+  max-width: 66.6666%;
+}
+
+.col-9 {
+  flex: 0 0 75%;
+  width: 75%;
+  max-width: 75%;
+}
+
+.col-10 {
+  flex: 0 0 83.3333%;
+  width: 83.3333%;
+  max-width: 83.3333%;
+}
+
+.col-11 {
+  flex: 0 0 91.6666%;
+  width: 91.6666%;
+  max-width: 91.6666%;
+}
+
+.col-12 {
+  flex: 0 0 100%;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* 按钮类 */
+.button {
+  font-size: 28rpx;
+  margin: 0;
+  padding: 0 40rpx;
+  display: inline-block;
+  text-align: center;
+  border-radius: 0;
+  font-weight: normal;
+  line-height: 2.55555556;
+}
+
+.button:not([size='mini']) {
+  width: auto;
+}
+
+.button::after {
+  border: none;
+}
+
+.button.lg {
+  font-size: 32rpx;
+  padding: 0 50rpx;
+}
+
+.button.sm {
+  font-size: 26rpx;
+  padding: 0 30rpx;
+}
+
+.button.xs {
+  font-size: 22rpx;
+  padding: 0 20rpx;
+}
+
+.button.full {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+.button.round {
+  border-radius: 50rpx;
+}
+
+.button.round:after,
+.button.clear:after {
+  border: none;
+}
+
+.button.clear {
+  color: #333 !important;
+  background: transparent !important;
+  box-shadow: none;
+}
+
+.button.outline {
+  background: transparent;
+  border-style: solid;
+  border-width: 2rpx;
+}
+
+.button.cancel {
+  background: #F5F9FC;
+  color: #666;
+}
+
+/** 卡片 **/
+.own-card {
+  margin: 20rpx;
+  width: calc(100% - 40rpx);
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 20rpx;
+  overflow: hidden;
+}
+.own-card.shadow {
+  box-shadow: 0rpx 10rpx 30rpx 2rpx #e4e4e4;
+}
+
+/** 列表 **/
+.own-list {
+  list-style-type: none;
+  box-sizing: border-box;
+}
+.own-list-header {
+  padding: 20rpx;
+  font-size: 26rpx;
+  color: #666;
+}
+
+/** popup **/
+.own-center-popup-container {
+  padding: 30rpx 20rpx;
+  background: #fff;
+  border-radius: 10rpx;
+}
+
+.own-center-popup--title {
+  font-size: 30rpx;
+  font-weight: bold;
+  text-align: center;
+}
+
+.own-center-popup--input {
+  background: #f8f8f8;
+  font-size: 30rpx;
+  padding: 16rpx 10rpx;
+  border-radius: 10rpx;
+}

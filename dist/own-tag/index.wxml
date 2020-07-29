@@ -1,0 +1,24 @@
+<wxs module="component" src="../components-wxs.wxs"></wxs>
+<wxs module="wxs">
+  function setStyle(color,outline,round,size,bgColor){
+    var tagStyle = 'font-size:' + size + ';';;
+    if(round) {
+      tagStyle += 'border-radius:20rpx;';
+    } else {
+      tagStyle += 'border-radius:4rpx;';
+    }
+    if(outline) {
+      tagStyle += 'border: 1px solid ' + bgColor + ';background-color:' + bgColor + ';color:' + color +';';
+    } else {
+      tagStyle += 'color: #fff;background-color:' + bgColor + ';';
+    }
+    return tagStyle;
+  }
+  module.exports = {
+    setStyle:setStyle
+  }
+</wxs>
+<view class="own-tag {{component.setClass(classList)}} own-tag-class" style="{{wxs.setStyle(color,outline,round,size,bgColor)}}">
+  <block wx:if="{{msg}}">{{msg}}</block>
+  <block wx:else><slot/></block>
+</view>

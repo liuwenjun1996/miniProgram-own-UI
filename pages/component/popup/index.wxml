@@ -1,0 +1,44 @@
+<wxs module="theme" src="../../../wxs/theme.wxs"></wxs>
+<view>
+	<button class="button" style="{{theme.buttonTheme(sysConfig)}}" bindtap="openTop">top</button>
+	<button class="button" style="{{theme.buttonTheme(sysConfig,'secondary')}}" bindtap="openBottom">buttom</button>
+		<button class="button" style="{{theme.buttonTheme(sysConfig,'secondary')}}" bindtap="openLeft">left</button>
+			<button class="button" style="{{theme.buttonTheme(sysConfig,'secondary')}}" bindtap="openRight">right</button>
+	<button class="button" style="{{theme.buttonTheme(sysConfig,'secondary')}}" bindtap="openCenter">center</button>
+</view>
+<own-popup type="top" id="topPopup" z-index="9999999999" bind:change="close">
+	<view class="pupopTopContainer">
+		<own-item link>123</own-item>
+		<own-item link>456</own-item>
+		<own-item link>789</own-item>
+	</view>
+</own-popup>
+<own-popup type="bottom" id="bottomPopup">
+	<view class="pupopTopContainer">
+	<own-item>
+		<button class="button" style="{{theme.buttonTheme(sysConfig)}}" bindtap="openTop">top</button>
+	</own-item>
+	
+	</view>
+</own-popup>
+<own-popup type="left" id="leftPopup">
+	<view class="pupopTopContainer">
+		<own-item link>123</own-item>
+		<own-item link>456</own-item>
+		<own-item link>789</own-item>
+	</view>
+</own-popup>
+<own-popup type="right" id="rightPopup">
+	<view class="pupopTopContainer">
+		<own-item link>123</own-item>
+		<own-item link>456</own-item>
+		<own-item link>789</own-item>
+	</view>
+</own-popup>
+<own-popup type="center" id="centerPopup">
+	<view class="pupopTopContainer-c">
+		<own-item link>123</own-item>
+		<own-item link>456</own-item>
+		<own-item link>789</own-item>
+	</view>
+</own-popup>

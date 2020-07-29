@@ -1,0 +1,23 @@
+@import './dist/common/wxss/custom.wxss';
+@import './dist/common/wxss/own-components.wxss';
+@import './dist/common/wxss/own.wxss';
+page,
+view,
+text,
+image,
+button,
+textarea {
+  box-sizing: border-box;
+}
+
+page {
+  height: 100%;
+  background: #f5f6f6;
+  font-size: 28rpx;
+}
+button::after {
+  border: none;
+}
+button {
+  font-size:inherit;
+}

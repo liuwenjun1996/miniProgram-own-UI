@@ -1,0 +1,12 @@
+<own-item>
+	<own-count bind:calcValue="calcValue" size="sm" modal></own-count>
+</own-item>
+<own-item>
+	<own-count step="0.1" bind:calcValue="calcValue" disabled></own-count>
+</own-item>
+<own-item>
+	<own-count step="0.01" bind:calcValue="calcValue" size="lg"></own-count>
+</own-item>
+<own-item>
+	<own-count step="0.001" bind:calcValue="calcValue" modal></own-count>
+</own-item>

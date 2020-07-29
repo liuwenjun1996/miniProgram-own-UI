@@ -1,0 +1,56 @@
+<wxs module="component" src="../components-wxs.wxs"></wxs>
+<wxs module="wxs">
+	function setItemStyle(flex) {
+		var style = '';
+		switch (flex) {
+			case 'start':
+				style += 'align-items: flex-start;'
+				break;
+			case 'center':
+				style += 'align-items: center;'
+				break;
+			case 'end':
+				style += 'align-items: flex-end;'
+				break;
+		}
+		return style;
+	}
+
+	function setItemEndStyle(link) {
+		var style = '';
+		if (link) {
+			style = 'margin-right: 20rpx';
+		}
+		return style;
+	}
+
+	function setItemInnerStyle(link, end) {
+		var style = '';
+		if (link && !end) {
+			style = 'padding-right: 20rpx';
+		}
+		return style;
+	}
+
+	module.exports = {
+		setItemStyle:setItemStyle,
+		setItemEndStyle: setItemEndStyle,
+		setItemInnerStyle: setItemInnerStyle
+	}
+</wxs>
+<view class="{{component.setClass(classList)}} own-item own-item-class" style="{{wxs.setItemStyle(flex)}}" bindtap="_tap">
+	<view class="own-item-start own-start-class" wx:if="{{start}}">
+		<slot name="start" />
+	</view>
+	<view class="own-item-inner own-inner-class" style="{{wxs.setItemInnerStyle(link,end)}}">
+		<slot />
+	</view>
+	<view class="own-item-end own-end-class" style="{{wxs.setItemEndStyle(link)}}" wx:if="{{end}}">
+		<slot name="end" />
+	</view>
+
+	<view class="own-item-link own-link-class" wx:if="{{link}}">
+		<own-icon name="{{linkIcon}}" color="{{linkColor}}" size="{{linkSize}}"></own-icon>
+	</view>
+
+</view>

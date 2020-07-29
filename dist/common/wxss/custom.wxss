@@ -1,0 +1,82 @@
+.normal-title {
+  font-size: 26rpx !important;
+  font-weight: normal !important;
+  line-height: 1.5;
+  color: #333 !important;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin-bottom: 10rpx;
+}
+
+.normal-title-nohidden {
+  font-size: 26rpx !important;
+  font-weight: normal !important;
+  line-height: 1.5;
+  color: #333 !important;
+}
+
+.small-title {
+  font-size: 24rpx !important;
+  color: #333 !important;
+  font-weight: normal !important;
+}
+
+.sub-title {
+  font-size: 24rpx !important;
+  color: #666 !important;
+  font-weight: normal !important;
+}
+
+.lage-title {
+  font-size: 32rpx !important;
+  color: #333 !important;
+  font-weight: bold !important;
+}
+
+.normal-price {
+  font-size: 36rpx;
+  color: #f04141;
+}
+
+.normal-price::before {
+  content: '￥';
+  font-size: 24rpx;
+}
+
+.small-price {
+  font-size: 28rpx;
+  color: #f04141;
+}
+
+.small-price::before {
+  content: '￥';
+  font-size: 20rpx;
+}
+
+.normal-symbol {
+  font-size: 22rpx;
+  color: #999;
+}
+
+.normal-symbol::before {
+  content: '/';
+  font-size: 22rpx;
+}
+
+.original-price {
+  font-size: 24rpx;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.original-price::before {
+  content: '￥';
+  font-size: 22rpx;
+}
+
+.explain {
+  font-size: 24rpx !important;
+  color: #999 !important;
+}

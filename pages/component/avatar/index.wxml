@@ -1,0 +1,7 @@
+<view>
+	<own-avatar type="avatar" margin src="{{img}}"></own-avatar>
+  <own-avatar type="avatar" margin src="{{img}}" width="200rpx" height="200rpx"></own-avatar>
+	<own-avatar type="thumbnail" margin src="{{img}}"></own-avatar>
+  <own-avatar type="thumbnail" margin src="{{img}}" width="300rpx" height="200rpx"></own-avatar>
+  <own-avatar type="thumbnail" margin src="{{img}}" width="300rpx" height="300rpx"></own-avatar>
+</view>

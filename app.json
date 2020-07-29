@@ -1,0 +1,65 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/demo/index",
+    "pages/component/button/index",
+    "pages/component/image/index",
+    "pages/component/avatar/index",
+    "pages/component/item/index",
+    "pages/component/transition/index",
+    "pages/component/popup/index",
+    "pages/component/count/index",
+    "pages/component/notice/index",
+    "pages/component/tabs/index",
+    "pages/component/empty/index",
+    "pages/component/tag/index",
+    "pages/demos/setTheme/index",
+    "pages/component/fab/index",
+    "pages/component/search/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "ownUI1.0.0",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页",
+        "iconPath": "/assets/images/theme/home-outline.png",
+        "selectedIconPath": "/assets/images/theme/tab_1/home.png"
+      },
+      {
+        "pagePath": "pages/demo/index",
+        "text": "案例",
+        "iconPath": "/assets/images/theme/demo-outline.png",
+        "selectedIconPath": "/assets/images/theme/tab_1/demo.png"
+      }
+    ],
+    "borderStyle": "white",
+    "color": "#999",
+    "selectedColor": "#ff4d48"
+  },
+  "usingComponents": {
+    "own-item": "./dist/own-item/index",
+    "own-icon": "./dist/own-icon/index",
+    "own-image": "./dist/own-image/index",
+    "own-avatar": "./dist/own-avatar/index",
+    "own-transition": "./dist/own-transition/index",
+    "own-popup": "./dist/own-popup/index",
+    "own-count": "./dist/own-count/index",
+    "own-notice": "./dist/own-notice/index",
+    "own-card": "./dist/own-card/index",
+    "own-loading": "./dist/own-loading/index",
+    "own-list": "./dist/own-list/index",
+    "own-tabs": "./dist/own-tabs/index",
+    "own-empty": "./dist/own-empty/index",
+    "own-tag": "./dist/own-tag/index",
+    "own-fab": "./dist/own-fab/index",
+    "own-search": "./dist/own-search/index"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,16 @@
+<wxs module="theme" src="../../../wxs/theme.wxs"></wxs>
+<own-card>
+	<radio-group bindchange="themeChange">
+		<label wx:for="{{themeList}}" wx:key="id">
+			<own-item start>
+				<radio slot="start" value="{{item.id}}" color="{{item.colorCustom.colorMain}}" checked="{{item.id == checkTheme.id}}" />
+				<text style="color:{{item.colorCustom.colorMain}}" class="bold">{{item.name}}</text>
+			</own-item>
+		</label>
+	</radio-group>
+</own-card>
+
+
+<view class="padding">
+	<button class="button round full" style="{{theme.buttonTheme(checkTheme,'primary')}}" bindtap="submit">切换主题</button>
+</view>

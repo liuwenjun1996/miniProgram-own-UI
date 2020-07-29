@@ -1,0 +1,29 @@
+function setClass(classList = []){
+  var _classList = '';
+  for(var i = 0; i< classList.length; i++) {
+    var prefix_class = getSize(classList[i].value);
+    _classList = _classList+ ' '+ prefix_class+classList[i].key;
+  }
+  return _classList;
+}
+
+function getSize(size){
+  var prefix_class = '';
+  switch(size) {
+    case 'sm':
+      prefix_class = 'sm-';
+      break;
+    case 'xs':
+      prefix_class = 'xs-';
+      break;
+    case 'md':
+    case 'true':
+      prefix_class = '';
+      break;
+  }
+  return prefix_class;
+}
+
+module.exports = {
+  setClass:setClass
+}

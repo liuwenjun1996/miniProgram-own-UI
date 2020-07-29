@@ -1,0 +1,18 @@
+<view>
+	<own-item start>
+		<own-avatar slot="start" type="avatar" src="{{img}}"></own-avatar>
+		<text>我左右一式太极拳</text>
+	</own-item>
+	<own-item start>
+		<own-avatar slot="start" type="thumbnail" src="{{img}}"></own-avatar>
+		<text>我左右一式太极拳</text>
+	</own-item>
+	<own-item end>
+		<own-avatar slot="end" type="avatar" src="{{img}}"></own-avatar>
+		<text>我左右一式太极拳</text>
+	</own-item>
+	<own-item end>
+		<own-avatar slot="end" type="thumbnail" src="{{img}}"></own-avatar>
+		<text>我左右一式太极拳</text>
+	</own-item>
+</view>

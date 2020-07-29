@@ -1,0 +1,5 @@
+<view>
+	<own-image src="{{img}}"></own-image>
+	<own-image src="{{img}}" width="300rpx" hight="300rpx" margin-top="sm" ></own-image>
+	<own-image src="{{img}}" width="300rpx" hight="300rpx" radius="20rpx"  margin-top="sm"></own-image>
+</view>

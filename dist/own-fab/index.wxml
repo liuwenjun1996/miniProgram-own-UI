@@ -1,0 +1,15 @@
+<wxs src="./drag.wxs" module="drag"></wxs>
+<wxs module="wxs">
+	function setStyle(width, height, radius, backgroundColor, left, top) {
+		var style = 'width:' + width + 'px;height:' + height + 'px;border-radius:' + radius + ';background-color:' + backgroundColor + ';top:' + top +'px;left:' + left + 'px;';
+		return style;
+	}
+	module.exports = {
+		setStyle: setStyle
+	}
+</wxs>
+<view class="own-fab own-fab-class" data-width="{{windowWidth}}" data-height="{{windowHeight}}" catchtouchstart="{{drag.touchstart}}" catchtouchmove="{{drag.touchmove}}" catchtouchend='{{drag.touchmove}}' style="{{wxs.setStyle(width,height,radius,backgroundColor,left,top)}}">
+	<view class="own-fab-inner own-inner-class">
+		<slot />
+	</view>
+</view>

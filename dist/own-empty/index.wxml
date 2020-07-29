@@ -1,0 +1,7 @@
+<wxs module="component" src="../components-wxs.wxs"></wxs>
+<view class="own-empty {{component.setClass(classList)}} own-empty-class" wx:if="{{show}}">
+  <view class="own-empty-container">
+    <image src="{{src}}" mode="widthFix" class="own-empty-image own-image-class"></image>
+    <text class="own-empty-msg own-msg-class">{{msg}}</text>
+  </view>
+</view>

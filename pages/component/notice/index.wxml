@@ -1,0 +1,9 @@
+<own-notice content="{{notice}}" showIcon margin-bottom scrollable></own-notice>
+<own-notice content="{{notice}}" showIcon margin-bottom scrollable speed="20"></own-notice>
+<own-notice content="{{notice}}" margin-bottom></own-notice>
+<own-notice content="{{notice}}" showIcon margin-bottom></own-notice>
+<own-notice content="{{notice}}" showIcon showMore margin-bottom bind:getmore="getMore"></own-notice>
+<own-notice content="{{notice}}" showIcon showMore moreType="text" margin-bottom></own-notice>
+<own-notice content="{{notice}}" showIcon showClose margin-bottom></own-notice>
+<own-notice content="{{notice}}" showIcon showMore margin-bottom bind:getmore="getMore"></own-notice>
+<own-notice content="{{notice}}" showIcon margin-bottom single></own-notice>

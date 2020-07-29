@@ -1,0 +1,9 @@
+.pupopTopContainer {
+  background-color: #fff;
+  padding: 20rpx;
+}
+.pupopTopContainer-c {
+  background-color: #fff;
+  padding: 20rpx;
+  width: 200rpx;
+}

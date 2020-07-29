@@ -1,0 +1,48 @@
+<wxs module="component" src="../components-wxs.wxs"></wxs>
+<wxs module="wxs">
+	function setStyle(backgroundColor, color, coustomStyle) {
+		var style = '';
+		style = 'background-color:' + backgroundColor + ';color:' + color + ';';
+		if (coustomStyle) {
+			style += coustomStyle;
+		}
+		return style;
+	}
+
+	function setMoreStyle(moreSize, moreColor) {
+		var style = '';
+		style = 'font-size:' + moreSize + ';color:' + moreColor + ';';
+		return style;
+	}
+
+	function setContentStyle(single,scrollable){
+		var style = ''
+		if(single) {
+			style= 'white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100%;';
+		}
+		if(scrollable) {
+			style = 'white-space: nowrap;display:inline-block;'
+		}
+		return style;
+	}
+	module.exports = {
+		setStyle: setStyle,
+		setMoreStyle: setMoreStyle,
+		setContentStyle:setContentStyle
+	}
+</wxs>
+<view class="{{component.setClass(classList)}} own-notice own-notice-class" style="{{wxs.setStyle(backgroundColor,color,coustomStyle)}}" wx:if="{{showNotice}}" bindtap="noticeTap">
+	<view class="own-notice-left own-left-class" wx:if="{{showIcon}}">
+		<own-icon name="{{iconName}}" color="{{iconColor}}" size="{{iconSize}}"></own-icon>
+	</view>
+	<view class="own-notice-warp own-warp-class">
+		<view class="own-notice-content" animation="{{ animationData }}" style="{{wxs.setContentStyle(single,scrollable)}}">{{content}}</view>
+	</view>
+	<view class="own-notice-right own-right-class" wx:if="{{showMore}}" bindtap="getmore">
+		<own-icon wx:if="{{moreType == 'icon'}}" size="{{moreSize}}" name="{{moreName}}" color="{{moreColor}}"></own-icon>
+		<text wx:if="{{moreType == 'text'}}" style="{{wxs.setMoreStyle(moreSize,moreColor)}}">{{moreName}}</text>
+	</view>
+	<view class="own-notice-right" wx:if="{{showClose}}" bindtap="close">
+		<own-icon name="{{closeName}}" color="{{closeColor}}" size="{{closeSize}}"></own-icon>
+	</view>
+</view>

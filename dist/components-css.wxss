@@ -1,0 +1,2 @@
+@import './common/wxss/own-components.wxss';
+@import './common/wxss/own.wxss';

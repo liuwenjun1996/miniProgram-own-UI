@@ -1,0 +1,17 @@
+<wxs module="component" src="../components-wxs.wxs"></wxs>
+<wxs module="wxs">
+	function setStyle(width, height, radius, coustomStyle) {
+		var style = '';
+		style = 'width:' + width + ';height:' + height + ';border-radius:' + radius + ';' + coustomStyle;
+    return style;
+	}
+	module.exports = {
+		setStyle: setStyle
+	}
+</wxs>
+<view class="{{component.setClass(classList)}} own-avatar own-avatar-class" style="{{wxs.setStyle(width,height,radius,coustomStyle)}}">
+	<view class="own-avatar-mask" wx:if="{{mask}}">
+		<image src="{{maskUrl}}" class="own-avatar-maskImage"></image>
+	</view>
+	<image src="{{src}}" mode="{{mode}}" class="own-image-class" style="{{wxs.setStyle(width,height,radius,coustomStyle)}}" lazy-load="{{lazyLoad}}" binderror="binderror" bindload="bindload"></image>
+</view>

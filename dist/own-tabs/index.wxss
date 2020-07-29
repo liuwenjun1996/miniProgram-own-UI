@@ -1,0 +1,39 @@
+@import '../components-css.wxss';
+
+.own-tabs {
+  background: #fff;
+  display: flex;
+}
+.own-tabs-container {
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+}
+.own-tabs-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.own-tabs-scroll {
+  height: 100%;
+}
+.own-tabs-item {
+  position: relative;
+  overflow: hidden;
+}
+.own-tabs-title {
+  font-size: 26rpx;
+  color: #333;
+}
+.own-tabs-tag {
+  position: absolute;
+  right: 6rpx;
+  top: 4rpx;
+  font-size: 20rpx;
+  padding: 0rpx 12rpx;
+  /* font-weight: bold; */
+  border-radius: 34rpx;
+}
+.own-more {
+  padding: 10rpx;
+}

@@ -1,0 +1,49 @@
+<wxs module="theme" src="../../../wxs/theme.wxs"></wxs>
+<view class="own-card">
+	<view class="own-row text-center">
+		<view class="own-col col-12">
+			<button class="button lg">超大按钮</button>
+		</view>
+		<view class="own-col col-12">
+			<button class="button">正常按钮</button>
+		</view>
+		<view class="own-col col-12">
+			<button class="button sm">小按钮</button>
+		</view>
+		<view class="own-col col-12">
+			<button class="button xs">偏小按钮</button>
+		</view>
+
+		<view class="own-col col-12">
+			<button class="button" style="{{theme.buttonTheme(sysConfig)}}">主题按钮</button>
+		</view>
+		<view class="own-col col-12">
+			<button class="button" style="{{theme.buttonTheme(sysConfig,'secondary')}}">辅助按钮</button>
+		</view>
+		<view class="own-col col-12">
+			<button class="button cancel">取消按钮</button>
+		</view>
+
+		<view class="own-col col-12">
+			<button class="button outline" style="{{theme.buttonTheme(sysConfig,'primary','true')}}">高亮主题按钮</button>
+		</view>
+		<view class="own-col col-12">
+			<button class="button outline" style="{{theme.buttonTheme(sysConfig,'secondary','false')}}">高亮辅助按钮</button>
+		</view>
+		<view class="own-col col-12">
+			<button class="button outline round" style="{{theme.buttonTheme(sysConfig,'primary','true')}}">高亮主题按钮</button>
+		</view>
+		<view class="own-col col-12">
+			<button class="button outline round" style="{{theme.buttonTheme(sysConfig,'secondary','false')}}">高亮辅助按钮</button>
+		</view>
+		<view class="own-col col-12">
+			<button class="button round" style="{{theme.buttonTheme(sysConfig,'primary')}}">高亮主题按钮</button>
+		</view>
+		<view class="own-col col-12">
+			<button class="button round" style="{{theme.buttonTheme(sysConfig,'secondary')}}">高亮辅助按钮</button>
+		</view>
+    	<view class="own-col col-12">
+			<button class="button round cancel">取消按钮</button>
+		</view>
+	</view>
+</view>

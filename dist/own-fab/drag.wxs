@@ -1,0 +1,47 @@
+var startX = 0;
+var startY = 0;
+var lastLeft = lastTop = 15;
+function touchstart(event, ins) {
+  console.log(111,JSON.stringify(event))
+  var touch = event.touches[0] || event.changedTouches[0];
+  var target = event.target;
+  startX = touch.pageX;
+  startY = touch.pageY;
+  lastLeft = target.offsetLeft;
+  lastTop = target.offsetTop;
+
+  
+  // startX = target.offsetLeft;
+  // startY = target.offsetTop;
+  // startX = 0;
+  // startY = 0;
+  ins.callMethod('testCallmethod', {
+    complete: function(res) {
+      console.log('args', res)
+    }
+  })
+}
+function touchmove(event, ins) {
+  var touch = event.touches[0] || event.changedTouches[0];
+  var pageX = touch.pageX;
+  var pageY = touch.pageY;
+  var left = pageX - startX + lastLeft;
+  var top = pageY - startY + lastTop;
+  var dataset = event.target.dataset;
+  left < 0 && (left = 0);
+  top < 0 && (top = 0);
+  left > dataset.width && (left = dataset.width);
+  top > dataset.height && (top = dataset.height );
+  startX = pageX;
+  startY = pageY;
+  lastLeft = left;
+  lastTop = top;
+  ins.selectComponent('.own-fab').setStyle({
+    left: left + 'px',
+    top: top + 'px'
+  })
+}
+module.exports = {
+  touchstart: touchstart,
+  touchmove: touchmove,
+}

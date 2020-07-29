@@ -1,0 +1,21 @@
+@import '../components-css.wxss';
+.own-empty {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.own-empty-container {
+  width: 100%;
+  text-align: center;
+}
+.own-empty-image {
+  display: block;
+  margin: 0 auto 20rpx;
+  width: 50%;
+}
+.own-empty-msg {
+  font-size: 26rpx;
+  color: #999;
+}

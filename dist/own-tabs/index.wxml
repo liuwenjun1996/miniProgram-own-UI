@@ -1,0 +1,156 @@
+<wxs module="component" src="../components-wxs.wxs"></wxs>
+<wxs module="wxs">
+	function setTabsStyle(position,morePosition) {
+		var style = "";
+		if (position == 'top') {
+			style = "height: 88rpx; width: 100%;";
+			if(morePosition == 'start') {
+				style += 'flex-direction: row-reverse;';
+			} else {
+				style += 'flex-direction: row;';
+			}
+		}
+		if (position == 'left') {
+			style = 'width: 150rpx; height: 100%;';
+				if(morePosition == 'start') {
+				style += 'flex-direction: column-reverse;';
+			} else {
+				style += 'flex-direction: column;';
+			}
+		}
+		return style;
+	}
+
+	function setInnerStyle(position, scrollable) {
+		var style = '';
+		if (!scrollable) {
+			style += 'display: flex;justify-items: center;align-items: center;';
+			if (position == 'top') {
+				style += 'flex-direction: row; '
+			}
+			if (position == 'left') {
+				style += 'flex-direction: column;'
+			}
+		}
+		if (scrollable) {
+			style += 'white-space: nowrap;'
+		}
+		return style;
+	}
+
+	function setItemStyle(position, scrollable) {
+		var style = '';
+		if (!scrollable) {
+			style = 'flex:1 1 auto;height: 100%;width: 100%;display: flex;align-items: center;justify-content: center;';
+			if (position == 'left') {
+				style += 'display: flex;align-items: center;'
+			}
+		}
+		if (scrollable) {
+			if (position == 'top') {
+				style += 'display:inline-block;height:100%; padding: 0 30rpx;';
+			}
+			if (position == 'left') {
+				style += 'padding: 30rpx 20rpx;text-align:center;'
+			}
+		}
+		return style;
+	}
+
+	function setItemActive(sysConfig, position, type, isActive) {
+		var style = '';
+		if (isActive && type == 'outline') {
+			if (position == 'top') {
+				style += 'border-bottom: 4rpx solid' + sysConfig.colorCustom.colorMain + ';'
+			}
+			if (position == 'left') {
+				style += 'border-right: 4rpx solid' + sysConfig.colorCustom.colorMain + ';'
+			}
+		}
+		if (!isActive && type == 'outline') {
+			if (position == 'top') {
+				style += 'border-bottom: 4rpx solid #fff;';
+			}
+			if (position == 'left') {
+				style += 'border-right: 4rpx solid #fff;';
+			}
+		}
+		if (isActive && type == 'block') {
+			style += 'background-color:' + sysConfig.colorCustom.colorMain + ';'
+		}
+		return style;
+	}
+
+	function setTextActive(sysConfig, position, type, isActive) {
+		var style = '';
+		if (type != 'block') {
+			style += 'display: block;'
+			if (position == 'top') {
+				style += 'height:100%;display:flex; align-items: center;justify-content: center;padding: 0 6rpx;';
+			}
+			if (position == 'left') {
+				style += 'width:100%;text-align:center;padding: 6rpx 0;';
+			}
+		}
+		if (position == 'top') {
+			style += 'white-space: nowrap;overflow: hidden;text-overflow: ellipsis;';
+		}
+		if (position == 'left') {
+			style += 'overflow:hidden;text-overflow:ellipsis;display:-webkit-box; -webkit-box-orient:vertical;-webkit-line-clamp:2;word-wrap: break-word;white-space:normal;'
+		}
+		if (isActive && type != 'block') {
+			style += "font-weight: bold;color:" + sysConfig.colorCustom.colorMain + ';';
+			if (type == 'line' && position == 'top') {
+				style += 'border-bottom: 4rpx solid ' + sysConfig.colorCustom.colorMain + ';';
+			}
+			if (type == 'line' && position == 'left') {
+				style += 'border-right: 4rpx solid ' + sysConfig.colorCustom.colorMain + ';';
+			}
+		}
+		if (isActive && type == 'block') {
+			style += 'color:#fff;'
+		}
+		if (!isActive && type == 'line') {
+			if (position == 'top') {
+				style += 'border-bottom: 4rpx solid #fff;';
+			}
+			if (position == 'left') {
+				style += 'border-right: 4rpx solid #fff;';
+			}
+		}
+		return style;
+	}
+
+	function setTagStyle(sysConfig, type) {
+		var style = ''
+		if (type == 'block') {
+			style = 'background-color:#fff;color:' + sysConfig.colorCustom.colorMain + ';'
+		} else {
+			style = 'color:#fff;background-color:' + sysConfig.colorCustom.colorMain + ';'
+		}
+		return style;
+	}
+	module.exports = {
+		setTabsStyle: setTabsStyle,
+		setInnerStyle: setInnerStyle,
+		setItemStyle: setItemStyle,
+		setItemActive: setItemActive,
+		setTextActive: setTextActive,
+		setTagStyle: setTagStyle
+	}
+</wxs>
+<view class="{{component.setClass(classList)}} own-tabs" style="{{wxs.setTabsStyle(position,morePosition)}}">
+	<view class="own-tabs-container">
+		<scroll-view class="own-tabs-scroll" scroll-x="{{scrollable && position == 'top'}}" scroll-y="{{scrollable && position == 'left'}}">
+			<view class="own-tabs-inner" style="{{wxs.setInnerStyle(position,scrollable)}}">
+				<view class="own-tabs-item" style="{{wxs.setItemStyle(position,scrollable)}} {{wxs.setItemActive(sysConfig,position,type,current == item[extend.key] )}}" wx:for="{{list}}" wx:key="key" wx:for-index="i" bindtap="_taggle" data-index='{{i}}'>
+					<text class="own-tabs-title" style="{{wxs.setTextActive(sysConfig,position,type,current == item[extend.key] )}}">{{item[extend.value]}}</text>
+					<text wx:if="{{showTag && item[extend.num] > 0}}" class="own-tabs-tag own-tag-class" style="{{wxs.setTagStyle(sysConfig,type)}}">{{item[extend.num]}}</text>
+				</view>
+			</view>
+		</scroll-view>
+	</view>
+	<view wx:if="{{more}}" class="own-more flex flex-center own-more-class" bindtap="_moreClick">
+		<slot />
+	</view>
+</view>

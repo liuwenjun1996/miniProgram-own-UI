@@ -1,0 +1,52 @@
+<wxs module="theme" src="../../wxs/theme.wxs"></wxs>
+<wxs module="wxs">
+	function setPopupContainerStyle(screenWidth) {
+		var style = '';
+		if (screenWidth) {
+			style = 'width:' + screenWidth * 0.75 + 'px;';
+			return style;
+		}
+	}
+	function setCountDisabledStyle(disabled) {
+		var style = '';
+		if(disabled) {
+			style = 'opacity: 0.5;'
+		}
+		return style;
+	}
+	module.exports = {
+		setPopupContainerStyle: setPopupContainerStyle,
+		setCountDisabledStyle:setCountDisabledStyle
+	}
+</wxs>
+<view class="own-count {{size}} own-count-class" style="{{wxs.setCountDisabledStyle(disabled)}}">
+	<view class="own-count-inner own-inner-class">
+		<view wx:if="{{value > 0 || (value <=0 && !emptyHide) }}" class="own-count-sub own-sub-class" bindtap="_calcValue" data-type="sub">
+			<!-- <text class="own-count-text own-text-class">-</text> -->
+				<own-icon name="jianshao" color="{{color}}" size="{{iconSize}}"></own-icon>
+		</view>
+		<input wx:if="{{value > 0 || (value <=0 && !emptyHide) }}" type="number" class="own-count-input own-input-class" disabled value='{{value}}' bindtap="openCountPopup"></input>
+		<view class="own-count-add own-add-class" bindtap="_calcValue" data-type="add">
+			<!-- <text class="own-count-text own-text-class">
+				
+			</text> -->
+			<own-icon name="jiahao" color="{{color}}" size="{{iconSize}}"></own-icon>
+		</view>
+	</view>
+
+</view>
+<own-popup type="center" id="countPopup" wx:if="{{modal}}">
+	<view class="own-center-popup-container" style="{{wxs.setPopupContainerStyle(screenWidth)}}">
+		<view class="own-center-popup--title margin-bottom">修改数量</view>
+		<input class="own-center-popup--input" focus="{{inputFocus}}" value="{{popupInputValue}}" type="{{popupInputType}}" bindinput="popupInputChange"></input>
+		<text class="own-input-err" wx:if="{{errTip}}">*{{errTip}}</text>
+		<view class="own-row margin-top">
+			<view class="own-col col-6">
+				<button class="button full round cancel" bindtap="_cancle">取消</button>
+			</view>
+			<view class="own-col col-6">
+				<button class="button full round" style="{{theme.buttonTheme(sysConfig)}}" bindtap="_submit">确定</button>
+			</view>
+		</view>
+	</view>
+</own-popup>

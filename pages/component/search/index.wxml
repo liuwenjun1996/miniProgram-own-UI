@@ -1,0 +1,19 @@
+<!--pages/component/search/index.wxml-->
+<own-item>
+	<own-search></own-search>
+</own-item>
+
+<view class="padding" style="background-color:#000">
+	<own-search></own-search>
+</view>
+
+<own-item>
+	<own-search mode="practical"></own-search>
+</own-item>
+
+
+<own-item>
+	<own-search mode="practical" prefix bind:search="search">
+    	<own-icon size="50rpx" color="#999" name="scan" bindtap="scan"></own-icon>
+  </own-search>
+</own-item>

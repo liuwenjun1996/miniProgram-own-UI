@@ -1,0 +1,8 @@
+<own-card>
+		<own-item link no-line url="/pages/demos/setTheme/index">
+			<text>主题切换</text>
+		</own-item>
+	</own-card>
+<own-fab>
+    <own-icon name="add" size="60rpx" color="#fff"></own-icon>
+  </own-fab>
